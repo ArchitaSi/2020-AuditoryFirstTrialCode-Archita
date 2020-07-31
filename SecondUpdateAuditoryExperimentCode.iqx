@@ -31,6 +31,7 @@
 <text mytext>
 / items = myitems
 / select = sequence
+/fontstyle = ("Arial", 4%)
 </text>
 
 <item myitems>
@@ -43,6 +44,7 @@ You will be asked to rate how similar the two sounds are on a scale from 0-7.
 Please press the [space bar] to continue."
 /3 = "Should you need to quit the experiment at any time please press Ctrl +Q to exit the experiment.
 Please press the [space bar ] to continue."
+/fontstyle = ("Arial", 4%)
 </item>
 *********Practice trial*******************
 <block Practice>
@@ -61,6 +63,7 @@ Please press the [space bar ] to continue."
 <text calibrationinstructions>
 / items = ("Please ensure that you can hear the following tone clearly.
 To continue on in the experiment please press the [space bar].")
+/fontstyle = ("Arial", 4%)
 </text>
 
 
@@ -74,6 +77,7 @@ To continue on in the experiment please press the [space bar].")
 </trial>
 <text Pracinstructionstext>
 / items = Practiceinstructions
+/fontstyle = ("Arial", 4%)
 </text>
 <trial PracticeReady>
 / stimulusframes = [1 = PracticeRead]
@@ -84,6 +88,7 @@ To continue on in the experiment please press the [space bar].")
 <text PracticeRead>
 / items = ("You are now going to do a few practice trials to make you become more familiar with the experiment
 Please press the [space bar] to continue.")
+/fontstyle = ("Arial", 4%)
 </text>
 
 
@@ -92,7 +97,6 @@ Please press the [space bar] to continue.")
 /1 = "In this experiment you will be hearing the following 9 sounds
 Press [Space Bar] to continue
 sound <%values.Practice_sound_value%> of 9"
-
 </item>
 
 <sound myeightsounds>
@@ -123,6 +127,7 @@ sound <%values.Practice_sound_value%> of 9"
 / items = ("Congratulations you have now finished your practice trials.
 The real trial will begin shortly.
 Press [space bar] to continue.")
+/fontstyle = ("Arial", 4%)
 
 </text>
 <trial PracticeRun>
@@ -175,8 +180,10 @@ Press [space bar] to continue.")
 <text stimulus>
 / items = ("Please listen to the following sounds and determine how similar they are
 0= most similar
-7 = most dissimilar")
+7 = most dissimilar
+Use the mouse to click on the appropriate number on the screen")
 / position = (80%, 50%)
+/fontstyle = ("Arial", 2%)
 </text>
 <text Quit_Notice>
 / items = ("Should you need to quit at any point in time please press Ctrl+Q")
