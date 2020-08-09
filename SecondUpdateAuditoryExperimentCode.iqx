@@ -301,8 +301,37 @@ Use the mouse to click on the appropriate number on the screen")
 </values>
 
 <block InitialMonosyllabicSounds>
-/ trials = [1-144=noreplace(monosyl1,monosyl2,monosyl3,monosyl4, monosyl5, monosyl6, monosyl7, monosyl8, monosyl9, monosyl10, monosyl11, monosyl12)]
+/ trials = [1-156=noreplace(monosyl1,monosyl2,monosyl3,monosyl4, monosyl5, monosyl6, monosyl7, monosyl8, monosyl9, monosyl10, monosyl11, monosyl12, catchtrial)]
 </block>
+
+<trial catchtrial>
+/ stimulustimes = [0=monosylsound, catchtext, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar]
+/ validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
+/ inputdevice = mouse
+/ branch = [
+	trial.centremouse
+]
+</trial>
+
+<text catchtext>
+/ items = catchie
+/ select = noreplace
+/ position = (80%, 50%)
+/fontstyle = ("Arial", 2%)
+</text>
+
+
+<item catchie>
+/1 = "Please select 0 to continue"
+/2 = "Please select 1 to continue"
+/3 = "Please select 2 to continue"
+/4 = "Please select 3 to continue"
+/5 = "Please select 4 to continue"
+/6 = "Please select 5 to continue"
+/7 = "Please select 6 to continue"
+/8 = "Please select 7 to continue"
+</item>
+
 
 <trial monosyl1>
 / ontrialbegin = [values.myvalue=list.monosyl1items.nextindex]
