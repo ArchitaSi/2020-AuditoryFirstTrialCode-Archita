@@ -1,6 +1,6 @@
 ﻿***********Main control of experiment***********************
 <expt Auditory>
-/ blocks = [1=consent;2=myblock;3=Practice;4=InitialMonosyllabicSounds;5=mytone]
+/ blocks = [1=consent;2=myblock;3=Practice;4=InitialMonosyllabicSounds]
 </expt>
 
 
@@ -48,7 +48,7 @@ Please press the [space bar ] to continue."
 </item>
 *********Practice trial*******************
 <block Practice>
-/ trials = [1= calibration; 2-10= Practicetrial; 11= PracticeReady ;12-14=PracticeRun;15=Finishedpracticerun]
+/ trials = [1= calibration; 2-13= Practicetrial; 14= PracticeReady ;15-16=PracticeRun;17=Finishedpracticerun]
 
 </block>
 <trial calibration>
@@ -94,9 +94,9 @@ Please press the [space bar] to continue.")
 
 
 <item Practiceinstructions>
-/1 = "In this experiment you will be hearing the following 9 sounds
+/1 = "In this experiment you will be hearing the following 12 sounds
 Press [Space Bar] to continue
-sound <%values.Practice_sound_value%> of 9"
+sound <%values.Practice_sound_value%> of 12"
 </item>
 
 <sound myeightsounds>
@@ -107,15 +107,18 @@ sound <%values.Practice_sound_value%> of 9"
 
 
 <item eightsounds>
-/1 = "Low Tone Sound recording.wav"
-/2 = "Medium Tone recording.wav"
-/3 = "High Tone sound recording.wav"
-/4 = "Ba sound recording.wav"
-/5= "Da sound recording.wav"
-/6 = "Ga sound recording.wav"
-/7 = "Pa sound recording.wav"
-/8 = "Ta sound recording.wav"
-/9 =  "Ka sound recording.wav"
+/ 1 = "Ba sound recording.wav"
+/2= "Da sound recording.wav"
+/3 = "Ga sound recording.wav"
+/4 = "Pa sound recording.wav"
+/5 = "Ta sound recording.wav"
+/6 =  "Ka sound recording.wav"
+/7 = "Ba backward.wav"
+/8 = "Da backward.wav"
+/9 = "Ga backward.wav"
+/10 = "Pa backward.wav"
+/11 = "Ta backward.wav"
+/12 = "Ka backward.wav"
 </item>
 
 <trial Finishedpracticerun>
@@ -152,10 +155,9 @@ Press [space bar] to continue.")
 
 
 <item Practicesounds>
-/1 = "Practice tone 1.wav"
-/2 = "Practice Tone 3.wav"
-/3 = "Practice Tone 2.wav"
-/4 = "Practice Tone 4.wav"
+/1 = "Low Tone Sound recording.wav"
+/2 = "Medium Tone recording.wav"
+/3 = "High Tone Sound Recording.wav"
 </item>
 
 
@@ -299,7 +301,7 @@ Use the mouse to click on the appropriate number on the screen")
 </values>
 
 <block InitialMonosyllabicSounds>
-/ trials = [1-36=noreplace(monosyl1,monosyl2,monosyl3,monosyl4, monosyl5, monosyl6)]
+/ trials = [1-144=noreplace(monosyl1,monosyl2,monosyl3,monosyl4, monosyl5, monosyl6, monosyl7, monosyl8, monosyl9, monosyl10, monosyl11, monosyl12)]
 </block>
 
 <trial monosyl1>
@@ -380,7 +382,83 @@ Use the mouse to click on the appropriate number on the screen")
 ]
 </trial>
 
+<trial monosyl7>
+/ ontrialbegin = [values.myvalue=list.monosyl7items.nextindex]
+/ stimulustimes = [0=monosylsound;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= Baback]
+/ validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
+/ inputdevice = mouse
+/ branch = [
+	trial.centremouse
+]
+/ ontrialend = [
+	values.trial_number +=1
+]
+</trial>
 
+<trial monosyl8>
+/ ontrialbegin = [values.myvalue=list.monosyl8items.nextindex]
+/ stimulustimes = [0=monosylsound;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= Daback]
+/ validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
+/ inputdevice = mouse
+/ branch = [
+	trial.centremouse
+]
+/ ontrialend = [
+	values.trial_number +=1
+]
+</trial>
+
+<trial monosyl9>
+/ ontrialbegin = [values.myvalue=list.monosyl9items.nextindex]
+/ stimulustimes = [0=monosylsound;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= Gaback]
+/ validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
+/ inputdevice = mouse
+/ branch = [
+	trial.centremouse
+]
+/ ontrialend = [
+	values.trial_number +=1
+]
+</trial>
+
+<trial monosyl10>
+/ ontrialbegin = [values.myvalue=list.monosyl10items.nextindex]
+/ stimulustimes = [0=monosylsound;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= Paback]
+/ validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
+/ inputdevice = mouse
+/ branch = [
+	trial.centremouse
+]
+/ ontrialend = [
+	values.trial_number +=1
+]
+</trial>
+
+<trial monosyl11>
+/ ontrialbegin = [values.myvalue=list.monosyl11items.nextindex]
+/ stimulustimes = [0=monosylsound;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= Taback]
+/ validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
+/ inputdevice = mouse
+/ branch = [
+	trial.centremouse
+]
+/ ontrialend = [
+	values.trial_number +=1
+]
+</trial>
+
+<trial monosyl12>
+/ ontrialbegin = [values.myvalue=list.monosyl12items.nextindex]
+/ stimulustimes = [0=monosylsound;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= Kaback]
+/ validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
+/ inputdevice = mouse
+/ branch = [
+	trial.centremouse
+]
+/ ontrialend = [
+	values.trial_number +=1
+]
+</trial>
 <sound monosylsound>
 / items = mymonosyl
 / select = values.myvalue
@@ -394,6 +472,12 @@ Use the mouse to click on the appropriate number on the screen")
 /4 = "Pa sound recording.wav"
 /5 = "Ta sound recording.wav"
 /6 = "Ka sound recording.wav"
+/7 = "Ba backward.wav"
+/8 = "Da backward.wav"
+/9 = "Ga backward.wav"
+/10 = "Pa backward.wav"
+/11 = "Ta backward.wav"
+/12 = "Ka backward.wav"
 </item>
 
 <sound Ba>
@@ -429,129 +513,99 @@ Use the mouse to click on the appropriate number on the screen")
 
 </sound>
 
+<sound Baback>
+/ items = ("Ba backward.wav")
+/playthrough = true
+</sound>
 
+<sound Kaback>
+/ items = ("Ka backward.wav")
+/ playthrough = true
+</sound>
+
+<sound Gaback>
+/ items = ("Ga backward.wav")
+/ playthrough = true
+</sound>
+
+<sound Taback>
+/ items = ("Ta backward.wav")
+/ playthrough = true
+</sound>
+
+<sound Paback>
+/ items = ("Pa backward.wav")
+/ playthrough = true
+</sound>
+
+<sound Daback>
+/ items = ("Da backward.wav")
+/ playthrough = true
+</sound>
+
+
+
+
+******* The following lists serve to store the sounds played before to ensure that sounds are not repeated in each trial.********************
+*********This is done through the poolsize being limited to 12 thus allowing only 12 sounds to be played and by storing the previous sounds played***************
 <list monosyl1items>
-/ poolsize = 6
+/ poolsize = 12
 </list>
 
 <list monosyl2items>
-/ poolsize = 6
+/ poolsize = 12
 </list>
 
 <list monosyl3items>
-/ poolsize = 6
+/ poolsize = 12
 </list>
 
 <list monosyl4items>
-/ poolsize = 6
+/ poolsize = 12
 </list>
 
 <list monosyl5items>
-/ poolsize = 6
+/ poolsize = 12
 </list>
 
 <list monosyl6items>
-/ poolsize = 6
+/ poolsize = 12
+</list>
 
+<list monosyl7items>
+/ poolsize = 12
+</list>
+
+<list monosyl8items>
+/ poolsize = 12
+</list>
+
+<list monosyl9items>
+/ poolsize = 12
+</list>
+
+<list monosyl10items>
+/ poolsize = 12
+</list>
+
+<list monosyl11items>
+/ poolsize = 12
+</list>
+
+<list monosyl12items>
+/ poolsize = 12
 </list>
 
 
+
 <text Questionnumber>
-/ items = ("You have finished <%values.trial_number%> of 45 questions")
+/ items = ("You have finished <%values.trial_number%> of 144 questions")
 / position = (50%,90%)
 </text>
 
 
 
 
-************Trial for distinguishing three different tones***********************
 
 
-
-<block mytone>
-/ trials = [1-9=noreplace(tone1,tone2,tone3)]
-</block>
-
-<trial tone1>
-/ ontrialbegin = [values.myvalue=list.tone1items.nextindex]
-/ stimulustimes = [0=tones;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500=low]
-/ validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
-/ inputdevice = mouse
-/ branch = [
-	trial.centremouse
-]
-/ ontrialend = [
-	values.trial_number +=1
-]
-</trial>
-
-<trial tone2>
-/ ontrialbegin = [values.myvalue=list.tone2items.nextindex]
-/ stimulustimes = [0=tones;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= medium]
-/ validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
-/ inputdevice = mouse
-/ branch = [
-	trial.centremouse
-]
-/ ontrialend = [
-	values.trial_number +=1
-]
-</trial>
-
-<trial tone3>
-/ ontrialbegin = [values.myvalue=list.tone3items.nextindex]
-/ stimulustimes = [0=tones;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= High]
-/ validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
-/ inputdevice = mouse
-/ branch = [
-	trial.centremouse
-]
-/ ontrialend = [
-	values.trial_number +=1
-]
-</trial>
-
-
-<sound tones>
-/ items = mytones
-/ select = values.myvalue
-</sound>
-
-<item mytones>
-/1 = "Low Tone Sound recording.wav"
-/2 = "Medium Tone recording.wav"
-/3 = "High Tone sound recording.wav"
-
-</item>
-
-
-<sound low>
-/ items = ("Low Tone Sound Recording.wav")
-/ playthrough = true
-</sound>
-
-<sound medium>
-/ items = ("Medium Tone recording.wav")
-/ playthrough = true
-</sound>
-
-<sound High>
-/ items = ("High Tone sound recording.wav")
-/ playthrough = true
-
-</sound>
-
-
-
-<list tone1items>
-/ poolsize = 3
-</list>
-
-<list tone2items>
-/ poolsize = 3
-</list>
-
-<list tone3items>
-/ poolsize = 3
-</list>
 
