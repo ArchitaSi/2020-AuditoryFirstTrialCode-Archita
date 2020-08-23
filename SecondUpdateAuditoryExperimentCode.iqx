@@ -129,6 +129,8 @@ sound <%values.Practice_sound_value%> of 12"
 <text Finishtex>
 / items = ("Congratulations you have now finished your practice trials.
 The real trial will begin shortly.
+Please note that there are catch trials embedded in with the real trials to ensure you are paying attention to the instructions.
+A catch trial will now begin once you press the space bar followed by the actual trials.
 Press [space bar] to continue.")
 /fontstyle = ("Arial", 4%)
 
@@ -189,7 +191,7 @@ Use the mouse to click on the appropriate number on the screen")
 <text zerobutton>
 / items = ("0")
 / size = (7%, 7%)
-/ position = (30%, 25%)
+/ position = (25%, 23%)
 / txbgcolor = black
 / txcolor = white
 / vjustify = center
@@ -198,7 +200,7 @@ Use the mouse to click on the appropriate number on the screen")
 <text onebutton>
 / items = ("1")
 /size = (7%, 7%)
-/ position = (25%, 35%)
+/ position = (20%, 35%)
 / txbgcolor = black
 / txcolor = white
 / vjustify = center
@@ -208,7 +210,7 @@ Use the mouse to click on the appropriate number on the screen")
 <text twobutton>
 / items = ("2")
 /size = (7%, 7%)
-/ position = (25%, 45%)
+/ position = (20%, 48%)
 / txbgcolor = black
 / txcolor = white
 / vjustify = center
@@ -217,7 +219,7 @@ Use the mouse to click on the appropriate number on the screen")
 <text threebutton>
 / items = ("3")
 /size = (7%, 7%)
-/ position = (30%, 55%)
+/ position = (25%, 58%)
 / txbgcolor = black
 / txcolor = white
 / vjustify = center
@@ -226,7 +228,7 @@ Use the mouse to click on the appropriate number on the screen")
 <text fourbutton>
 / items = ("4")
 /size = (7%, 7%)
-/ position = (40%, 55%)
+/ position = (45%, 58%)
 / txbgcolor = black
 / txcolor = white
 / vjustify = center
@@ -235,7 +237,7 @@ Use the mouse to click on the appropriate number on the screen")
 <text fivebutton>
 / items = ("5")
 /size = (7%, 7%)
-/ position = (45%, 45%)
+/ position = (50%, 48%)
 / txbgcolor = black
 / txcolor = white
 / vjustify = center
@@ -244,7 +246,7 @@ Use the mouse to click on the appropriate number on the screen")
 <text sixbutton>
 / items = ("6")
 /size = (7%, 7%)
-/ position = (45%, 35%)
+/ position = (50%, 35%)
 / txbgcolor = black
 / txcolor = white
 / vjustify = center
@@ -253,7 +255,7 @@ Use the mouse to click on the appropriate number on the screen")
 <text sevenbutton>
 / items = ("7")
 /size = (7%, 7%)
-/ position = (40%, 25%)
+/ position = (45%, 23%)
 / txbgcolor = black
 / txcolor = white
 / vjustify = center
@@ -276,13 +278,13 @@ Use the mouse to click on the appropriate number on the screen")
 
 <text Similar>
 / items = ("Similar")
-/ position = (15%, 40%)
+/ position = (12%, 40%)
 / txcolor = red
 </text>
 
 <text Dissimilar>
 / items = ("Dissimilar")
-/ position = (55%, 40%)
+/ position = (58%, 40%)
 / txcolor = red 
 </text>
 *************First monosylabic discrimination block*********************
@@ -294,7 +296,7 @@ Use the mouse to click on the appropriate number on the screen")
 </values>
 
 <block InitialMonosyllabicSounds>
-/ trials = [1-156=noreplace(monosyl1,monosyl2,monosyl3,monosyl4, monosyl5, monosyl6, monosyl7, monosyl8, monosyl9, monosyl10, monosyl11, monosyl12, catchtrial)]
+/ trials = [1=catchtrial;2-157=noreplace(monosyl1,monosyl2,monosyl3,monosyl4, monosyl5, monosyl6, monosyl7, monosyl8, monosyl9, monosyl10, monosyl11, monosyl12, catchtrial)]
 </block>
 
 <trial catchtrial>
