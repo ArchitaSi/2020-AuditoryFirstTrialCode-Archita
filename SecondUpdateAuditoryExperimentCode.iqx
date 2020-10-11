@@ -293,10 +293,11 @@ Use the mouse to click on the appropriate number on the screen")
 / myvalue = 1
 /trial_number = 1
 /Practice_sound_value =1
+/sound = 1
 </values>
 
 <block InitialMonosyllabicSounds>
-/ trials = [1=catchtrial;2-157=noreplace(monosyl1,monosyl2,monosyl3,monosyl4, monosyl5, monosyl6, monosyl7, monosyl8, monosyl9, monosyl10, monosyl11, monosyl12, catchtrial)]
+/ trials = [1=catchtrial;2-157=noreplace(Basound, Babackwardsound,Dasound, Dabackwardsound, Gasound, Gabackwardsound, Kasound, Kabackwardsound, Tabackwardsound, Tasound, Pabackwardsound, Pasound, catchtrial)]
 </block>
 
 <trial catchtrial>
@@ -332,7 +333,7 @@ Use the mouse to click on the appropriate number on the screen")
 </item>
 
 
-<trial monosyl1>
+<trial Basound>
 / ontrialbegin = [values.myvalue=list.monosyl1items.nextindex]
 / stimulustimes = [0=monosylsound;50 =stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= Ba]
 / validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
@@ -346,7 +347,7 @@ Use the mouse to click on the appropriate number on the screen")
 
 </trial>
 
-<trial monosyl2>
+<trial Dasound>
 / ontrialbegin = [values.myvalue=list.monosyl2items.nextindex]
 / stimulustimes = [0=monosylsound;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= Da]
 / validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
@@ -359,7 +360,7 @@ Use the mouse to click on the appropriate number on the screen")
 ]
 </trial>
 
-<trial monosyl3>
+<trial Gasound>
 / ontrialbegin = [values.myvalue=list.monosyl3items.nextindex]
 / stimulustimes = [0=monosylsound;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= Ga]
 / validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
@@ -372,7 +373,7 @@ Use the mouse to click on the appropriate number on the screen")
 ]
 </trial>
 
-<trial monosyl4>
+<trial Pasound>
 / ontrialbegin = [values.myvalue=list.monosyl4items.nextindex]
 / stimulustimes = [0=monosylsound;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= Pa]
 / validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
@@ -384,7 +385,7 @@ Use the mouse to click on the appropriate number on the screen")
 	values.trial_number +=1
 ]
 </trial>
-<trial monosyl5>
+<trial Tasound>
 / ontrialbegin = [values.myvalue=list.monosyl5items.nextindex]
 / stimulustimes = [0=monosylsound;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= Ta]
 / validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
@@ -397,7 +398,7 @@ Use the mouse to click on the appropriate number on the screen")
 ]
 </trial>
 
-<trial monosyl6>
+<trial Kasound>
 / ontrialbegin = [values.myvalue=list.monosyl6items.nextindex]
 / stimulustimes = [0=monosylsound;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= Ka]
 / validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
@@ -410,7 +411,7 @@ Use the mouse to click on the appropriate number on the screen")
 ]
 </trial>
 
-<trial monosyl7>
+<trial Babackwardsound>
 / ontrialbegin = [values.myvalue=list.monosyl7items.nextindex]
 / stimulustimes = [0=monosylsound;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= Baback]
 / validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
@@ -423,7 +424,7 @@ Use the mouse to click on the appropriate number on the screen")
 ]
 </trial>
 
-<trial monosyl8>
+<trial Dabackwardsound>
 / ontrialbegin = [values.myvalue=list.monosyl8items.nextindex]
 / stimulustimes = [0=monosylsound;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= Daback]
 / validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
@@ -436,7 +437,7 @@ Use the mouse to click on the appropriate number on the screen")
 ]
 </trial>
 
-<trial monosyl9>
+<trial Gabackwardsound>
 / ontrialbegin = [values.myvalue=list.monosyl9items.nextindex]
 / stimulustimes = [0=monosylsound;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= Gaback]
 / validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
@@ -449,7 +450,7 @@ Use the mouse to click on the appropriate number on the screen")
 ]
 </trial>
 
-<trial monosyl10>
+<trial Pabackwardsound>
 / ontrialbegin = [values.myvalue=list.monosyl10items.nextindex]
 / stimulustimes = [0=monosylsound;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= Paback]
 / validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
@@ -462,7 +463,7 @@ Use the mouse to click on the appropriate number on the screen")
 ]
 </trial>
 
-<trial monosyl11>
+<trial Tabackwardsound>
 / ontrialbegin = [values.myvalue=list.monosyl11items.nextindex]
 / stimulustimes = [0=monosylsound;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= Taback]
 / validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
@@ -475,7 +476,8 @@ Use the mouse to click on the appropriate number on the screen")
 ]
 </trial>
 
-<trial monosyl12>
+
+<trial Kabackwardsound>
 / ontrialbegin = [values.myvalue=list.monosyl12items.nextindex]
 / stimulustimes = [0=monosylsound;50 = stimulus, Quit_Notice, zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton, centrebutton, Questionnumber, dissimilaritylevel, Dissimilar, Similar;2500= Kaback]
 / validresponse = (zerobutton, onebutton, twobutton, threebutton, fourbutton, fivebutton, sixbutton, sevenbutton)
@@ -573,7 +575,6 @@ Use the mouse to click on the appropriate number on the screen")
 
 
 
-
 ******* The following lists serve to store the sounds played before to ensure that sounds are not repeated in each trial.********************
 *********This is done through the poolsize being limited to 12 thus allowing only 12 sounds to be played and by storing the previous sounds played***************
 <list monosyl1items>
@@ -631,9 +632,11 @@ Use the mouse to click on the appropriate number on the screen")
 / position = (50%,90%)
 </text>
 
-
-
-
+<data>
+/ file = "auditory_similarity.iqdat"
+/ columns = (build, date, time, subject, group, blockcode, blocknum , trialnum, trialcode, sound.monosylsound.currentitem, response, latency, subject)
+/ separatefiles = true
+</data>
 
 
 
